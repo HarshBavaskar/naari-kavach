@@ -112,7 +112,7 @@ export default function App() {
 
   // Optional pipeline output per hex: no-way-out stretches, people living nearby, night lights, NCRB baseline.
   useEffect(() => {
-    fetch('/data/risk-grid.json')
+    fetch(`${import.meta.env.BASE_URL}data/risk-grid.json`)
       .then((r) => (r.ok ? r.json() : null))
       .then((j: Partial<StaticData> | null) => j?.cells && Object.keys(j.cells).length && setStaticData({ cells: j.cells, cover: j.cover ?? [] }))
       .catch(() => undefined);

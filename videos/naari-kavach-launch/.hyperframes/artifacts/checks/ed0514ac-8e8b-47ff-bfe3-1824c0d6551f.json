@@ -1,0 +1,2789 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "negative_z_index",
+        "severity": "warning",
+        "message": "`z-index: -1` paints the element behind its nearest stacking context's own content. With no stacking-context ancestor that context is the composition root itself, so an opaque background there hides it entirely: in the DOM, laid out, and absent from the picture. A transparent root leaves it visible. Siblings at `z-index: 0` or above are unaffected.",
+        "selector": ".kv-app .sos__btn::before, .kv-app .sos__btn::after",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Give the element's parent a stacking context - `isolation: isolate` is the cheapest, and `transform`, `filter`, `opacity` below 1, `contain: paint` and `will-change` all work too. The negative-z child then paints above that parent's background and renders normally. Or express paint order through DOM order - an earlier sibling paints behind a later one - and raise the elements that should sit in front rather than lowering this one."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"el-helpline-band\"> is a timeline element that contains nested <img>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#el-helpline-band",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"el-helpline-band\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 10
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 16,
+    "warningCount": 11,
+    "infoCount": 49,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > header:nth-of-type(1) > h2:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -150.22,
+          "top": 23.65,
+          "right": 37.77,
+          "bottom": 97.31,
+          "width": 188,
+          "height": 73.66
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Trip shield",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -150.22,
+          "y": 23.65,
+          "width": 188,
+          "height": 73.66
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > header:nth-of-type(1) > p:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -150.22,
+          "top": 93.54,
+          "right": 288.26,
+          "bottom": 167.21,
+          "width": 438.49,
+          "height": 73.66
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Start it and put the phone away. It asks only if something looks wrong.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.56,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -150.22,
+          "y": 93.54,
+          "width": 438.49,
+          "height": 73.66
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 59.71,
+          "top": 226.43,
+          "right": 177.16,
+          "bottom": 265.43,
+          "width": 117.45,
+          "height": 39
+        },
+        "containerSelector": "#w6-bg",
+        "text": "To Gaimukh",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 59.71,
+          "y": 226.43,
+          "width": 117.45,
+          "height": 39
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 39.44,
+          "top": 265.43,
+          "right": 197.43,
+          "bottom": 298.65,
+          "width": 157.98,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Arrive by 10:20 pm",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 39.44,
+          "y": 265.43,
+          "width": 157.98,
+          "height": 33.22
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 53.01,
+          "top": 382.42,
+          "right": 183.84,
+          "bottom": 456.09,
+          "width": 130.83,
+          "height": 73.66
+        },
+        "containerSelector": "#w6-bg",
+        "text": "38 min",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 53.01,
+          "y": 382.42,
+          "width": 130.83,
+          "height": 73.66
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > small:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 87.63,
+          "top": 445.98,
+          "right": 149.2,
+          "bottom": 474.87,
+          "width": 61.57,
+          "height": 28.89
+        },
+        "containerSelector": "#w6-bg",
+        "text": "to arrive",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 87.63,
+          "y": 445.98,
+          "width": 61.57,
+          "height": 28.89
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -0.55,
+          "top": 571.64,
+          "right": 272.08,
+          "bottom": 604.86,
+          "width": 272.63,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Watching quietly. Nothing to do.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -0.55,
+          "y": 571.64,
+          "width": 272.63,
+          "height": 33.22
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 78.92,
+          "top": 649.05,
+          "right": 157.95,
+          "bottom": 688.05,
+          "width": 79.04,
+          "height": 39
+        },
+        "containerSelector": "#w6-bg",
+        "text": "End trip",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 78.92,
+          "y": 649.05,
+          "width": 79.04,
+          "height": 39
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2) > span:nth-of-type(2) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -28.89,
+          "top": 752.78,
+          "right": 43.84,
+          "bottom": 786,
+          "width": 72.74,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Feels off",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.56,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -28.89,
+          "y": 752.78,
+          "width": 72.74,
+          "height": 33.22
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2) > span:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -28.89,
+          "top": 780.49,
+          "right": 125.7,
+          "bottom": 809.38,
+          "width": 154.6,
+          "height": 28.89
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Watch closely, quietly",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.78,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -28.89,
+          "y": 780.49,
+          "width": 154.6,
+          "height": 28.89
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(3) > span:nth-of-type(2) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -28.89,
+          "top": 874.11,
+          "right": 94.56,
+          "bottom": 907.33,
+          "width": 123.45,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Earphone SOS",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -28.89,
+          "y": 874.11,
+          "width": 123.45,
+          "height": 33.22
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -28.89,
+          "top": 901.82,
+          "right": 140.87,
+          "bottom": 930.71,
+          "width": 169.76,
+          "height": 28.89
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Press its button 3 times",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.78,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -28.89,
+          "y": 901.82,
+          "width": 169.76,
+          "height": 28.89
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(4) > span:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -28.89,
+          "top": 1023.15,
+          "right": 248.07,
+          "bottom": 1052.04,
+          "width": 276.96,
+          "height": 28.89
+        },
+        "containerSelector": "#el-helpline-band",
+        "text": "Two short buzzes: left. One long: right.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.78,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -28.89,
+          "y": 1023.15,
+          "width": 276.96,
+          "height": 28.89
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) > button:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1716.89,
+          "top": 872.96,
+          "right": 1790.73,
+          "bottom": 932.18,
+          "width": 73.84,
+          "height": 59.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "SOS",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 1716.89,
+          "y": 872.96,
+          "width": 73.84,
+          "height": 59.22
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 62.476,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1789.58,
+          "top": 202.71,
+          "right": 1811.6,
+          "bottom": 226.14,
+          "width": 22.02,
+          "height": 23.43
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+        "text": "© OpenStreetMap contributors",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 1789.58,
+          "y": 202.71,
+          "width": 22.02,
+          "height": 23.43
+        },
+        "firstSeen": 62.476,
+        "lastSeen": 65.1,
+        "occurrences": 22,
+        "heldMs": 2623.9999999999955,
+        "times": [
+          62.476,
+          62.601,
+          62.726,
+          62.851,
+          62.976,
+          63.101,
+          63.226,
+          63.351,
+          63.476,
+          63.601,
+          63.726,
+          63.85,
+          63.975,
+          64.1,
+          64.225,
+          64.35,
+          64.475,
+          64.6,
+          64.725,
+          64.85,
+          64.975,
+          65.1
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 62.476,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1811.6,
+          "top": 202.71,
+          "right": 1872,
+          "bottom": 226.14,
+          "width": 60.4,
+          "height": 23.43
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "text": "OpenStreetMap",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 1811.6,
+          "y": 202.71,
+          "width": 60.4,
+          "height": 23.43
+        },
+        "firstSeen": 62.476,
+        "lastSeen": 65.1,
+        "occurrences": 22,
+        "heldMs": 2623.9999999999955,
+        "times": [
+          62.476,
+          62.601,
+          62.726,
+          62.851,
+          62.976,
+          63.101,
+          63.226,
+          63.351,
+          63.476,
+          63.601,
+          63.726,
+          63.85,
+          63.975,
+          64.1,
+          64.225,
+          64.35,
+          64.475,
+          64.6,
+          64.725,
+          64.85,
+          64.975,
+          65.1
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(4) > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 665.17,
+          "top": 156.63,
+          "right": 832.9,
+          "bottom": 198.15,
+          "width": 167.73,
+          "height": 41.52
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(4) > span:nth-of-type(2)",
+        "text": "Isolated stretch",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 665.17,
+          "y": 156.63,
+          "width": 167.73,
+          "height": 41.52
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.101,
+        "occurrences": 3,
+        "heldMs": 250,
+        "times": [
+          61.851,
+          61.976,
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(5) > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 886.46,
+          "top": 156.63,
+          "right": 1068.91,
+          "bottom": 198.15,
+          "width": 182.45,
+          "height": 41.52
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(5) > span:nth-of-type(2)",
+        "text": "Unsafe transport",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 886.46,
+          "y": 156.63,
+          "width": 182.45,
+          "height": 41.52
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.226,
+        "occurrences": 4,
+        "heldMs": 375,
+        "times": [
+          61.851,
+          61.976,
+          62.101,
+          62.226
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(6) > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1174.77,
+          "top": 156.63,
+          "right": 1237.96,
+          "bottom": 198.15,
+          "width": 63.19,
+          "height": 41.52
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(6) > span:nth-of-type(2)",
+        "text": "Other",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 1174.77,
+          "y": 156.63,
+          "width": 63.19,
+          "height": 41.52
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.226,
+        "occurrences": 4,
+        "heldMs": 375,
+        "times": [
+          61.851,
+          61.976,
+          62.101,
+          62.226
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 714.14,
+          "top": 283.73,
+          "right": 1035.34,
+          "bottom": 325.26,
+          "width": 321.2,
+          "height": 41.53
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+        "text": "Pin is in the centre of the map",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 714.14,
+          "y": 283.73,
+          "width": 321.2,
+          "height": 41.53
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.101,
+        "occurrences": 3,
+        "heldMs": 250,
+        "times": [
+          61.851,
+          61.976,
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 706.92,
+          "top": 377.24,
+          "right": 790.98,
+          "bottom": 425.99,
+          "width": 84.06,
+          "height": 48.75
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1)",
+        "text": "When?",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 706.92,
+          "y": 377.24,
+          "width": 84.06,
+          "height": 48.75
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.101,
+        "occurrences": 3,
+        "heldMs": 250,
+        "times": [
+          61.851,
+          61.976,
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 710.16,
+          "top": 472.39,
+          "right": 802.32,
+          "bottom": 513.91,
+          "width": 92.16,
+          "height": 41.52
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(1)",
+        "text": "Just now",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 710.16,
+          "y": 472.39,
+          "width": 92.16,
+          "height": 41.52
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.101,
+        "occurrences": 3,
+        "heldMs": 250,
+        "times": [
+          61.851,
+          61.976,
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 909.28,
+          "top": 472.39,
+          "right": 1046.12,
+          "bottom": 513.91,
+          "width": 136.84,
+          "height": 41.52
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2) > span:nth-of-type(1)",
+        "text": "Earlier today",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 909.28,
+          "y": 472.39,
+          "width": 136.84,
+          "height": 41.52
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.226,
+        "occurrences": 4,
+        "heldMs": 375,
+        "times": [
+          61.851,
+          61.976,
+          62.101,
+          62.226
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(3) > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1146.34,
+          "top": 472.39,
+          "right": 1251.98,
+          "bottom": 513.91,
+          "width": 105.64,
+          "height": 41.52
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(3) > span:nth-of-type(1)",
+        "text": "This week",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 1146.34,
+          "y": 472.39,
+          "width": 105.64,
+          "height": 41.52
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.226,
+        "occurrences": 4,
+        "heldMs": 375,
+        "times": [
+          61.851,
+          61.976,
+          62.101,
+          62.226
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 927.02,
+          "top": 587.02,
+          "right": 1075.31,
+          "bottom": 635.77,
+          "width": 148.29,
+          "height": 48.75
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+        "text": "Add a detail",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 927.02,
+          "y": 587.02,
+          "width": 148.29,
+          "height": 48.75
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.101,
+        "occurrences": 3,
+        "heldMs": 250,
+        "times": [
+          61.851,
+          61.976,
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 61.851,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 907.5,
+          "top": 710.54,
+          "right": 1047.9,
+          "bottom": 757.82,
+          "width": 140.4,
+          "height": 47.28
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)",
+        "text": "Save report",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 907.5,
+          "y": 710.54,
+          "width": 140.4,
+          "height": 47.28
+        },
+        "firstSeen": 61.851,
+        "lastSeen": 62.101,
+        "occurrences": 3,
+        "heldMs": 250,
+        "times": [
+          61.851,
+          61.976,
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 62.101,
+        "selector": "button.tile.is-on > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 945.03,
+          "top": 118.16,
+          "right": 1082.92,
+          "bottom": 159.05,
+          "width": 137.89,
+          "height": 40.89
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(3) > span:nth-of-type(2)",
+        "text": "Poor lighting",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 945.03,
+          "y": 118.16,
+          "width": 137.89,
+          "height": 40.89
+        },
+        "firstSeen": 62.101,
+        "lastSeen": 62.226,
+        "occurrences": 2,
+        "heldMs": 125,
+        "times": [
+          62.101,
+          62.226
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 3.617,
+        "selector": "#w2-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 707.52,
+          "top": -5.77,
+          "right": 886.05,
+          "bottom": 45.69,
+          "width": 178.53,
+          "height": 51.46
+        },
+        "containerSelector": "#w2-bg",
+        "text": "Naari Kavach",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": 707.52,
+          "y": -5.77,
+          "width": 178.53,
+          "height": 51.46
+        },
+        "firstSeen": 3.617,
+        "lastSeen": 3.617,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.617
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 3.617,
+        "selector": "#w2-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 707.52,
+          "top": 31.62,
+          "right": 785.65,
+          "bottom": 65.93,
+          "width": 78.13,
+          "height": 34.31
+        },
+        "containerSelector": "#w2-bg",
+        "text": "नारी कवच",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": 707.52,
+          "y": 31.62,
+          "width": 78.13,
+          "height": 34.31
+        },
+        "firstSeen": 3.617,
+        "lastSeen": 3.617,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.617
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 3.617,
+        "selector": "#w2-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > button:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1152.53,
+          "top": 13.1,
+          "right": 1180.94,
+          "bottom": 52.55,
+          "width": 28.41,
+          "height": 39.45
+        },
+        "containerSelector": "#w2-bg",
+        "text": "EN",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": 1152.53,
+          "y": 13.1,
+          "width": 28.41,
+          "height": 39.45
+        },
+        "firstSeen": 3.617,
+        "lastSeen": 3.617,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.617
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-count",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -125.63,
+          "top": 100,
+          "right": -47.38,
+          "bottom": 153,
+          "width": 78.25,
+          "height": 53
+        },
+        "containerSelector": "#root",
+        "text": "1 of 8",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 125.63
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": -125.63,
+          "y": 100,
+          "width": 78.25,
+          "height": 53
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-hi",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -125.63,
+          "top": 186,
+          "right": 339.59,
+          "bottom": 454.75,
+          "width": 465.22,
+          "height": 268.75
+        },
+        "containerSelector": "#root",
+        "text": "Routes scored for risk, not just time",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 125.63
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": -125.63,
+          "y": 186,
+          "width": 465.22,
+          "height": 268.75
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-sub",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -125.63,
+          "top": 462.63,
+          "right": 352.21,
+          "bottom": 613.81,
+          "width": 477.84,
+          "height": 151.18
+        },
+        "containerSelector": "#root",
+        "text": "It reads the streets before you walk them: empty stretches, dead ends, distance from help.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 125.63
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": -125.63,
+          "y": 462.63,
+          "width": 477.84,
+          "height": 151.18
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > button:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 629.68,
+          "top": 23.56,
+          "right": 684.81,
+          "bottom": 67.16,
+          "width": 55.13,
+          "height": 43.6
+        },
+        "containerSelector": "#w2-bg",
+        "text": "Walk",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": 629.68,
+          "y": 23.56,
+          "width": 55.13,
+          "height": 43.6
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > button:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 981.41,
+          "top": 23.56,
+          "right": 1030.73,
+          "bottom": 67.16,
+          "width": 49.32,
+          "height": 43.6
+        },
+        "containerSelector": "#w2-bg",
+        "text": "Ride",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": 981.41,
+          "y": 23.56,
+          "width": 49.32,
+          "height": 43.6
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(3)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 534.03,
+          "top": 902.67,
+          "right": 1037.99,
+          "bottom": 946.28,
+          "width": 503.96,
+          "height": 43.6
+        },
+        "containerSelector": "#w2-bg",
+        "text": "Longest gap between places open late: 1.4 km",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": 534.03,
+          "y": 902.67,
+          "width": 503.96,
+          "height": 43.6
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > button:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 716.27,
+          "top": 981.53,
+          "right": 954.67,
+          "bottom": 1032.71,
+          "width": 238.4,
+          "height": 51.19
+        },
+        "containerSelector": "#w2-bg",
+        "text": "Preview this route",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": 716.27,
+          "y": 981.53,
+          "width": 238.4,
+          "height": 51.19
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.083,
+        "selector": "#w4-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > p:nth-of-type(3)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 644.22,
+          "top": 907.88,
+          "right": 884.21,
+          "bottom": 928.64,
+          "width": 239.99,
+          "height": 20.76
+        },
+        "containerSelector": "#w4-bg",
+        "text": "Longest gap between places open late: 1.4 km",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/04-hardest.html",
+        "bbox": {
+          "x": 644.22,
+          "y": 907.88,
+          "width": 239.99,
+          "height": 20.76
+        },
+        "firstSeen": 18.083,
+        "lastSeen": 18.083,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.083
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.083,
+        "selector": "#w4-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > button:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 731.01,
+          "top": 945.43,
+          "right": 844.53,
+          "bottom": 969.81,
+          "width": 113.53,
+          "height": 24.38
+        },
+        "containerSelector": "#w4-bg",
+        "text": "Preview this route",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/04-hardest.html",
+        "bbox": {
+          "x": 731.01,
+          "y": 945.43,
+          "width": 113.53,
+          "height": 24.38
+        },
+        "firstSeen": 18.083,
+        "lastSeen": 18.083,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.083
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 18.083,
+        "selector": "#w4-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 642.42,
+          "top": 1017.65,
+          "right": 810.14,
+          "bottom": 1038.42,
+          "width": 167.72,
+          "height": 20.76
+        },
+        "containerSelector": "#el-helpline-band",
+        "text": "It is dark now. Sunrise 06:32 am.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/04-hardest.html",
+        "bbox": {
+          "x": 642.42,
+          "y": 1017.65,
+          "width": 167.72,
+          "height": 20.76
+        },
+        "firstSeen": 18.083,
+        "lastSeen": 18.083,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.083
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 25.317,
+        "selector": "#w5-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 739.91,
+          "top": 942.32,
+          "right": 841.18,
+          "bottom": 967.01,
+          "width": 101.27,
+          "height": 24.69
+        },
+        "containerSelector": "#w5-bg",
+        "text": "Tell my contacts",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/05-trip.html",
+        "bbox": {
+          "x": 739.91,
+          "y": 942.32,
+          "width": 101.27,
+          "height": 24.69
+        },
+        "firstSeen": 25.317,
+        "lastSeen": 25.317,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          25.317
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 25.317,
+        "selector": "#w5-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 733.75,
+          "top": 1026.44,
+          "right": 847.33,
+          "bottom": 1051.13,
+          "width": 113.59,
+          "height": 24.69
+        },
+        "containerSelector": "#el-helpline-band",
+        "text": "Share my location",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/05-trip.html",
+        "bbox": {
+          "x": 733.75,
+          "y": 1026.44,
+          "width": 113.59,
+          "height": 24.69
+        },
+        "firstSeen": 25.317,
+        "lastSeen": 25.317,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          25.317
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(4) > span:nth-of-type(2) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": -28.89,
+          "top": 995.44,
+          "right": 84.47,
+          "bottom": 1028.66,
+          "width": 113.36,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Pocket guide",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": -28.89,
+          "y": 995.44,
+          "width": 113.36,
+          "height": 33.22
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 32.55,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1699.26,
+          "top": 991.4,
+          "right": 1808.38,
+          "bottom": 1024.62,
+          "width": 109.12,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Hold for SOS",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 1699.26,
+          "y": 991.4,
+          "width": 109.12,
+          "height": 33.22
+        },
+        "firstSeen": 32.55,
+        "lastSeen": 39.783,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          32.55,
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 39.783,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 7.12,
+          "top": -1.81,
+          "right": 66.16,
+          "bottom": 31.42,
+          "width": 59.04,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Routes",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 7.12,
+          "y": -1.81,
+          "width": 59.04,
+          "height": 33.22
+        },
+        "firstSeen": 39.783,
+        "lastSeen": 39.783,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 39.783,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 155.74,
+          "top": -1.81,
+          "right": 194.87,
+          "bottom": 31.42,
+          "width": 39.13,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Help",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 155.74,
+          "y": -1.81,
+          "width": 39.13,
+          "height": 33.22
+        },
+        "firstSeen": 39.783,
+        "lastSeen": 39.783,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 39.783,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(3) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 284.42,
+          "top": -1.81,
+          "right": 343.51,
+          "bottom": 31.42,
+          "width": 59.08,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Report",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 284.42,
+          "y": -1.81,
+          "width": 59.08,
+          "height": 33.22
+        },
+        "firstSeen": 39.783,
+        "lastSeen": 39.783,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 39.783,
+        "selector": "#w6-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(4) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 435.9,
+          "top": -1.81,
+          "right": 469.35,
+          "bottom": 31.42,
+          "width": 33.45,
+          "height": 33.22
+        },
+        "containerSelector": "#w6-bg",
+        "text": "Trip",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-asks.html",
+        "bbox": {
+          "x": 435.9,
+          "y": -1.81,
+          "width": 33.45,
+          "height": 33.22
+        },
+        "firstSeen": 39.783,
+        "lastSeen": 39.783,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          39.783
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 223.22,
+          "top": 21.81,
+          "right": 285.23,
+          "bottom": 56.7,
+          "width": 62,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Routes",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 223.22,
+          "y": 21.81,
+          "width": 62,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 379.3,
+          "top": 21.81,
+          "right": 420.4,
+          "bottom": 56.7,
+          "width": 41.1,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Help",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 379.3,
+          "y": 21.81,
+          "width": 41.1,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(3) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 514.44,
+          "top": 21.81,
+          "right": 576.5,
+          "bottom": 56.7,
+          "width": 62.05,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Report",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 514.44,
+          "y": 21.81,
+          "width": 62.05,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(4) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 673.53,
+          "top": 21.81,
+          "right": 708.66,
+          "bottom": 56.7,
+          "width": 35.13,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Trip",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 673.53,
+          "y": 21.81,
+          "width": 35.13,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > header:nth-of-type(1) > h2:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 190.52,
+          "top": 95.38,
+          "right": 387.95,
+          "bottom": 172.74,
+          "width": 197.43,
+          "height": 77.36
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Trip shield",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 190.52,
+          "y": 95.38,
+          "width": 197.43,
+          "height": 77.36
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > header:nth-of-type(1) > p:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 190.52,
+          "top": 168.79,
+          "right": 651.01,
+          "bottom": 246.15,
+          "width": 460.5,
+          "height": 77.36
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Start it and put the phone away. It asks only if something looks wrong.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.89,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 190.52,
+          "y": 168.79,
+          "width": 460.5,
+          "height": 77.36
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 410.99,
+          "top": 308.34,
+          "right": 534.33,
+          "bottom": 349.3,
+          "width": 123.34,
+          "height": 40.96
+        },
+        "containerSelector": "#w7-bg",
+        "text": "To Gaimukh",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 410.99,
+          "y": 308.34,
+          "width": 123.34,
+          "height": 40.96
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 389.7,
+          "top": 349.3,
+          "right": 555.61,
+          "bottom": 384.19,
+          "width": 165.91,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Arrive by 10:20 pm",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 389.7,
+          "y": 349.3,
+          "width": 165.91,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 403.95,
+          "top": 472.17,
+          "right": 541.35,
+          "bottom": 549.53,
+          "width": 137.4,
+          "height": 77.36
+        },
+        "containerSelector": "#w7-bg",
+        "text": "38 min",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 403.95,
+          "y": 472.17,
+          "width": 137.4,
+          "height": 77.36
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > small:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 440.31,
+          "top": 538.91,
+          "right": 504.96,
+          "bottom": 569.25,
+          "width": 64.66,
+          "height": 30.34
+        },
+        "containerSelector": "#w7-bg",
+        "text": "to arrive",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 440.31,
+          "y": 538.91,
+          "width": 64.66,
+          "height": 30.34
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 347.7,
+          "top": 670.88,
+          "right": 634.02,
+          "bottom": 705.77,
+          "width": 286.31,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Watching quietly. Nothing to do.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 347.7,
+          "y": 670.88,
+          "width": 286.31,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 431.16,
+          "top": 752.18,
+          "right": 514.16,
+          "bottom": 793.13,
+          "width": 83,
+          "height": 40.96
+        },
+        "containerSelector": "#w7-bg",
+        "text": "End trip",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 431.16,
+          "y": 752.18,
+          "width": 83,
+          "height": 40.96
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2) > span:nth-of-type(2) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 317.94,
+          "top": 861.11,
+          "right": 394.33,
+          "bottom": 896,
+          "width": 76.39,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Feels off",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 317.94,
+          "y": 861.11,
+          "width": 76.39,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2) > span:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 317.94,
+          "top": 890.21,
+          "right": 480.29,
+          "bottom": 920.55,
+          "width": 162.36,
+          "height": 30.34
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Watch closely, quietly",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 317.94,
+          "y": 890.21,
+          "width": 162.36,
+          "height": 30.34
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(3) > span:nth-of-type(2) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 317.94,
+          "top": 988.53,
+          "right": 447.58,
+          "bottom": 1023.42,
+          "width": 129.65,
+          "height": 34.89
+        },
+        "containerSelector": "#w7-bg",
+        "text": "Earphone SOS",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 317.94,
+          "y": 988.53,
+          "width": 129.65,
+          "height": 34.89
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 47.017,
+        "selector": "#w7-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(3) > span:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 317.94,
+          "top": 1017.63,
+          "right": 496.22,
+          "bottom": 1047.97,
+          "width": 178.28,
+          "height": 30.34
+        },
+        "containerSelector": "#el-helpline-band",
+        "text": "Press its button 3 times",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 317.94,
+          "y": 1017.63,
+          "width": 178.28,
+          "height": 30.34
+        },
+        "firstSeen": 47.017,
+        "lastSeen": 47.017,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          47.017
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 54.25,
+        "selector": "ol.whatnow__steps > li:nth-of-type(1) > span:nth-of-type(2) > small:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 759.78,
+          "top": -55.79,
+          "right": 1272.8,
+          "bottom": 22.39,
+          "width": 513.02,
+          "height": 78.18
+        },
+        "containerSelector": "#w8-bg",
+        "text": "Somewhere lit with people around. Call 112 if you are in danger.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/08-rights.html",
+        "bbox": {
+          "x": 759.78,
+          "y": -55.79,
+          "width": 513.02,
+          "height": 78.18
+        },
+        "firstSeen": 54.25,
+        "lastSeen": 54.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          54.25
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 54.25,
+        "selector": "ol.whatnow__steps > li:nth-of-type(2) > span:nth-of-type(2) > strong:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 759.78,
+          "top": 37.37,
+          "right": 941.25,
+          "bottom": 78.9,
+          "width": 181.46,
+          "height": 41.53
+        },
+        "containerSelector": "#w8-bg",
+        "text": "Get medical care",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/08-rights.html",
+        "bbox": {
+          "x": 759.78,
+          "y": 37.37,
+          "width": 181.46,
+          "height": 41.53
+        },
+        "firstSeen": 54.25,
+        "lastSeen": 54.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          54.25
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 54.25,
+        "selector": "ol.whatnow__steps > li:nth-of-type(2) > span:nth-of-type(2) > small:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 759.78,
+          "top": 75.63,
+          "right": 1283.83,
+          "bottom": 227.1,
+          "width": 524.05,
+          "height": 151.47
+        },
+        "containerSelector": "#w8-bg",
+        "text": "Any hospital, government or private, must give first aid and treatment free after sexual assault or an acid attack. The hospital informs the police. (BNSS section 397)",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.17,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/08-rights.html",
+        "bbox": {
+          "x": 759.78,
+          "y": 75.63,
+          "width": 524.05,
+          "height": 151.47
+        },
+        "firstSeen": 54.25,
+        "lastSeen": 54.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          54.25
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 54.25,
+        "selector": "p.whatnow__kind",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 665.89,
+          "top": 902.08,
+          "right": 1024.05,
+          "bottom": 943.61,
+          "width": 358.16,
+          "height": 41.53
+        },
+        "containerSelector": "#w8-bg",
+        "text": "What happened is not your fault.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/08-rights.html",
+        "bbox": {
+          "x": 665.89,
+          "y": 902.08,
+          "width": 358.16,
+          "height": 41.53
+        },
+        "firstSeen": 54.25,
+        "lastSeen": 54.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          54.25
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 54.25,
+        "selector": "p.whatnow__note",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 665.89,
+          "top": 945.42,
+          "right": 1268.71,
+          "bottom": 981.53,
+          "width": 602.82,
+          "height": 36.11
+        },
+        "containerSelector": "#w8-bg",
+        "text": "General information, not legal advice. Checked on 13 October 2026.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/08-rights.html",
+        "bbox": {
+          "x": 665.89,
+          "y": 945.42,
+          "width": 602.82,
+          "height": 36.11
+        },
+        "firstSeen": 54.25,
+        "lastSeen": 54.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          54.25
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 54.25,
+        "selector": "#w8-stage > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > h3:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 709.23,
+          "top": 1036.77,
+          "right": 932.1,
+          "bottom": 1085.52,
+          "width": 222.88,
+          "height": 48.75
+        },
+        "containerSelector": "#el-helpline-band",
+        "text": "Best place to wait",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/08-rights.html",
+        "bbox": {
+          "x": 709.23,
+          "y": 1036.77,
+          "width": 222.88,
+          "height": 48.75
+        },
+        "firstSeen": 54.25,
+        "lastSeen": 54.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          54.25
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 61.483,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 686.97,
+          "top": -25.69,
+          "right": 815.7,
+          "bottom": 15.84,
+          "width": 128.73,
+          "height": 41.53
+        },
+        "containerSelector": "#w9-bg",
+        "text": "Harassment",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 686.97,
+          "y": -25.69,
+          "width": 128.73,
+          "height": 41.53
+        },
+        "firstSeen": 61.483,
+        "lastSeen": 61.483,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          61.483
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 61.483,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(2) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 931.74,
+          "top": -25.69,
+          "right": 1028.34,
+          "bottom": 15.84,
+          "width": 96.6,
+          "height": 41.53
+        },
+        "containerSelector": "#w9-bg",
+        "text": "Followed",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 931.74,
+          "y": -25.69,
+          "width": 96.6,
+          "height": 41.53
+        },
+        "firstSeen": 61.483,
+        "lastSeen": 61.483,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          61.483
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 61.483,
+        "selector": "button.tile.is-on > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1138.73,
+          "top": -25.69,
+          "right": 1278.78,
+          "bottom": 15.84,
+          "width": 140.05,
+          "height": 41.53
+        },
+        "containerSelector": "#w9-bg",
+        "text": "Poor lighting",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 1138.73,
+          "y": -25.69,
+          "width": 140.05,
+          "height": 41.53
+        },
+        "firstSeen": 61.483,
+        "lastSeen": 61.483,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          61.483
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 62.101,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 572,
+          "top": 118.16,
+          "right": 626.97,
+          "bottom": 159.05,
+          "width": 54.97,
+          "height": 40.89
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(2)",
+        "text": "Harassment",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 572,
+          "y": 118.16,
+          "width": 54.97,
+          "height": 40.89
+        },
+        "firstSeen": 62.101,
+        "lastSeen": 62.101,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 62.101,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(2) > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 741.22,
+          "top": 118.16,
+          "right": 836.34,
+          "bottom": 159.05,
+          "width": 95.12,
+          "height": 40.89
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(2) > span:nth-of-type(2)",
+        "text": "Followed",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 741.22,
+          "y": 118.16,
+          "width": 95.12,
+          "height": 40.89
+        },
+        "firstSeen": 62.101,
+        "lastSeen": 62.101,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          62.101
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 62.226,
+        "selector": "div.kv-root.kvx-a > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > header:nth-of-type(1) > p:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 572,
+          "top": 104.89,
+          "right": 666.94,
+          "bottom": 151.81,
+          "width": 94.94,
+          "height": 46.92
+        },
+        "containerSelector": "div.kv-root.kvx-b > div:nth-of-type(1) > aside:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > header:nth-of-type(1) > p:nth-of-type(1)",
+        "text": "Anonymous. Helps others avoid this spot.",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/09-report.html",
+        "bbox": {
+          "x": 572,
+          "y": 104.89,
+          "width": 94.94,
+          "height": 46.92
+        },
+        "firstSeen": 62.226,
+        "lastSeen": 62.226,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          62.226
+        ]
+      }
+    ],
+    "duration": 65.1,
+    "samples": [
+      3.617,
+      10.85,
+      18.083,
+      25.317,
+      32.55,
+      39.783,
+      47.017,
+      54.25,
+      61.483
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 76,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": [],
+    "checked": 0,
+    "passed": 0
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

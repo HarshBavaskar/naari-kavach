@@ -1,0 +1,334 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "negative_z_index",
+        "severity": "warning",
+        "message": "`z-index: -1` paints the element behind its nearest stacking context's own content. With no stacking-context ancestor that context is the composition root itself, so an opaque background there hides it entirely: in the DOM, laid out, and absent from the picture. A transparent root leaves it visible. Siblings at `z-index: 0` or above are unaffected.",
+        "selector": ".kv-app .sos__btn::before, .kv-app .sos__btn::after",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Give the element's parent a stacking context - `isolation: isolate` is the cheapest, and `transform`, `filter`, `opacity` below 1, `contain: paint` and `will-change` all work too. The negative-z child then paints above that parent's background and renders normally. Or express paint order through DOM order - an earlier sibling paints behind a later one - and raise the elements that should sit in front rather than lowering this one."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"el-helpline-band\"> is a timeline element that contains nested <img>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#el-helpline-band",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"el-helpline-band\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 10
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 3,
+    "findings": [
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-count",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -125.63,
+          "top": 100,
+          "right": -47.38,
+          "bottom": 153,
+          "width": 78.25,
+          "height": 53
+        },
+        "containerSelector": "#root",
+        "text": "1 of 8",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 125.63
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": -125.63,
+          "y": 100,
+          "width": 78.25,
+          "height": 53
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-hi",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -125.63,
+          "top": 186,
+          "right": 339.59,
+          "bottom": 454.75,
+          "width": 465.22,
+          "height": 268.75
+        },
+        "containerSelector": "#root",
+        "text": "Routes scored for risk, not just time",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 125.63
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": -125.63,
+          "y": 186,
+          "width": 465.22,
+          "height": 268.75
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 10.85,
+        "selector": "#w2-sub",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -125.63,
+          "top": 462.63,
+          "right": 352.21,
+          "bottom": 613.81,
+          "width": 477.84,
+          "height": 151.18
+        },
+        "containerSelector": "#root",
+        "text": "It reads the streets before you walk them: empty stretches, dead ends, distance from help.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 125.63
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes.html",
+        "bbox": {
+          "x": -125.63,
+          "y": 462.63,
+          "width": 477.84,
+          "height": 151.18
+        },
+        "firstSeen": 10.85,
+        "lastSeen": 10.85,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.85
+        ]
+      }
+    ],
+    "duration": 65.1,
+    "samples": [
+      3.617,
+      10.85,
+      18.083,
+      25.317,
+      32.55,
+      39.783,
+      47.017,
+      54.25,
+      61.483
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 3,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.27:1; WCAG AA requires 4.5:1.",
+        "text": "© OpenStreetMap contributors",
+        "fg": "rgb(120,129,170)",
+        "bg": "rgb(22,29,68)",
+        "ratio": 4.27,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(125,133,173)",
+        "large": false,
+        "selector": "div > div:nth-of-type(4) > div > div:nth-of-type(5) > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div",
+        "dataAttributes": {
+          "data-layout-allow-occlusion": "",
+          "data-layout-allow-overlap": "",
+          "data-layout-allow-overflow": ""
+        },
+        "sourceFile": "compositions/frames/04-hardest.html",
+        "bbox": {
+          "x": 1697.453125,
+          "y": 163.1959991455078,
+          "width": 160.1341552734375,
+          "height": 17.505859375
+        },
+        "time": 18.083,
+        "times": [
+          18.083
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.27:1; WCAG AA requires 4.5:1.",
+        "text": "नारी कवच",
+        "fg": "rgb(120,129,170)",
+        "bg": "rgb(22,29,68)",
+        "ratio": 4.27,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(125,133,173)",
+        "large": false,
+        "selector": "div > div:nth-of-type(4) > div > div:nth-of-type(5) > div > div > div:nth-of-type(1) > div > aside > div:nth-of-type(1) > div:nth-of-type(1) > span > span:nth-of-type(2)",
+        "dataAttributes": {
+          "data-layout-allow-occlusion": "",
+          "data-layout-allow-overlap": "",
+          "data-layout-allow-overflow": ""
+        },
+        "sourceFile": "compositions/frames/04-hardest.html",
+        "bbox": {
+          "x": 642.4183959960938,
+          "y": 151.7276153564453,
+          "width": 93.96173095703125,
+          "height": 11.905685424804688
+        },
+        "time": 18.083,
+        "times": [
+          18.083
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.86:1; WCAG AA requires 4.5:1.",
+        "text": "Call 112",
+        "fg": "rgb(255,255,255)",
+        "bg": "rgb(236,64,88)",
+        "ratio": 3.86,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(26,26,26)",
+        "large": false,
+        "selector": "div > div:nth-of-type(7) > div > div:nth-of-type(5) > div > div > div:nth-of-type(1) > div > div:nth-of-type(7) > div > div > div:nth-of-type(2) > a:nth-of-type(1) > span",
+        "dataAttributes": {
+          "data-layout-allow-occlusion": "",
+          "data-layout-allow-overlap": "",
+          "data-layout-allow-overflow": ""
+        },
+        "sourceFile": "compositions/frames/07-sos.html",
+        "bbox": {
+          "x": 939.8641357421875,
+          "y": 421.20697021484375,
+          "width": 84.4722900390625,
+          "height": 40.956298828125
+        },
+        "time": 47.017,
+        "times": [
+          47.017
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      3.617,
+      18.083,
+      32.55,
+      47.017,
+      61.483
+    ],
+    "checked": 84,
+    "passed": 81
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
