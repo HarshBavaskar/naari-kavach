@@ -1,0 +1,447 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 15,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"el-helpline-band\"> is a timeline element that contains nested <img>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#el-helpline-band",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"el-helpline-band\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\01-the-message.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\02-why-they-worry.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f03-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\03-tonight-meera.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f03-layer\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\03-tonight-meera.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f5-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\05-on-the-way.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f5-stage\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\05-on-the-way.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "overlapping_gsap_tweens",
+        "severity": "warning",
+        "message": "GSAP tweens overlap on \"#f5-dot\" for x between 1.50s and 2.20s.",
+        "selector": "#f5-dot",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\05-on-the-way.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Shorten the earlier tween, move the later tween, or add `overwrite: \"auto\"`."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f6-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\06-the-hardest-part.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f6-stage\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\06-the-hardest-part.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f07-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\07-if-she-had-needed-help.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f07-left\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\07-if-she-had-needed-help.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f08-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\08-home.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f10-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\10-the-close.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f10-stage\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\10-the-close.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      }
+    ],
+    "filesScanned": 11
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 3,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 7.126,
+        "selector": "#f1-time",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 188.66,
+          "top": 74.09,
+          "right": 229.91,
+          "bottom": 124.09,
+          "width": 41.25,
+          "height": 50
+        },
+        "containerSelector": "#f2-msg > div:nth-of-type(1)",
+        "text": "9:40 pm",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/01-the-message.html",
+        "bbox": {
+          "x": 188.66,
+          "y": 74.09,
+          "width": 41.25,
+          "height": 50
+        },
+        "firstSeen": 7.126,
+        "lastSeen": 7.126,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          7.126
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 7.126,
+        "selector": "#f1-time > b:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 96,
+          "top": 69.09,
+          "right": 173.27,
+          "bottom": 135.09,
+          "width": 77.27,
+          "height": 66
+        },
+        "containerSelector": "#f2-msg > div:nth-of-type(1)",
+        "text": "9:40",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/01-the-message.html",
+        "bbox": {
+          "x": 96,
+          "y": 69.09,
+          "width": 77.27,
+          "height": 66
+        },
+        "firstSeen": 7.126,
+        "lastSeen": 7.126,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          7.126
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 16.231,
+        "selector": "#f2-src",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 0,
+          "top": 984.9,
+          "right": 322.04,
+          "bottom": 1049.56,
+          "width": 322.04,
+          "height": 64.66
+        },
+        "containerSelector": "#band-help > b:nth-of-type(1)",
+        "text": "NFHS-5, women aged 18 to 49",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-why-they-worry.html",
+        "bbox": {
+          "x": 0,
+          "y": 984.9,
+          "width": 322.04,
+          "height": 64.66
+        },
+        "firstSeen": 16.231,
+        "lastSeen": 16.231,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          16.231
+        ]
+      }
+    ],
+    "duration": 79.046,
+    "samples": [
+      4.391,
+      13.174,
+      21.957,
+      30.74,
+      39.523,
+      48.306,
+      57.089,
+      65.872,
+      74.655
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 3,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.83:1; WCAG AA requires 3:1.",
+        "text": "840 m",
+        "fg": "rgb(232,121,26)",
+        "bg": "rgb(255,251,242)",
+        "ratio": 2.83,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(225,117,25)",
+        "large": true,
+        "selector": "div > div:nth-of-type(6) > div > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-the-hardest-part.html",
+        "bbox": {
+          "x": 1167.359375,
+          "y": 953,
+          "width": 80.765625,
+          "height": 30
+        },
+        "time": 39.523,
+        "times": [
+          39.523
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      4.391,
+      21.957,
+      39.523,
+      57.089,
+      74.655
+    ],
+    "checked": 43,
+    "passed": 42
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

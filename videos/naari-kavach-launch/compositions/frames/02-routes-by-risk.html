@@ -1,0 +1,39 @@
+<template>
+  <div id="root" data-composition-id="02-routes-by-risk" data-start="0" data-duration="7.5" data-width="1920" data-height="1080">
+    <style>
+      @font-face { font-family: "Anek Devanagari Variable"; src: url("assets/fonts/anek-devanagari-latin-wdth-normal.woff2") format("woff2"); font-weight: 100 800; font-stretch: 75% 125%; }
+      @font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      #f1-bg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: #FFFBF2; }
+      #f1-count { position: absolute; left: 64px; top: 100px; width: 480px; font-family: "Mukta", sans-serif; font-weight: 600; font-size: 32px; color: #4A5578; font-variant-numeric: tabular-nums; }
+      #f1-hi { position: absolute; left: 64px; top: 170px; width: 480px; font-family: "Anek Devanagari Variable", sans-serif; font-weight: 700; font-size: 66px; line-height: 1.18; color: #0B1F4B; }
+      #f1-sub { position: absolute; left: 64px; top: 640px; width: 470px; font-family: "Mukta", sans-serif; font-weight: 400; font-size: 34px; line-height: 1.4; color: #4A5578; }
+      #f1-shot { position: absolute; left: 572px; top: 100px; width: 1300px; height: 812.5px; border-radius: 16px; overflow: hidden; background: #0E1330; }
+      #f1-zoom { position: absolute; left: 0; top: 0; width: 1300px; height: 812.5px; }
+      #f1-zoom img { position: absolute; left: 0; top: 0; width: 1300px; height: 812.5px; display: block; }
+      #f1-svg { position: absolute; left: 0; top: 0; width: 1300px; height: 812.5px; }
+    </style>
+    <div id="f1-bg" class="clip" data-start="0" data-duration="7.5" data-track-index="0"></div>
+    <div id="f1-count">1 of 6</div>
+    <div id="f1-hi">Routes by risk, not just time</div>
+    <div id="f1-sub">Every route gets a safety score, not only a time.</div>
+    <div id="f1-shot"><div id="f1-zoom" data-layout-allow-overflow><img id="f1-img0" src="assets/hd-route.png" alt=""><svg id="f1-svg" viewBox="0 0 1300 812.5" xmlns="http://www.w3.org/2000/svg"><rect id="f1-ring" x="30.4" y="529.6" width="347.4" height="103.6" rx="10" ry="10" fill="none" stroke="#E8791A" stroke-width="4" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        var tl = gsap.timeline({ paused: true });
+        tl.fromTo("#f1-shot", { x: 140, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.1);
+        tl.fromTo("#f1-count", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.3);
+        tl.fromTo("#f1-hi", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.6);
+        tl.fromTo("#f1-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.4);
+        
+        tl.fromTo("#f1-ring", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut" }, 2.6);
+        tl.fromTo("#f1-zoom", { scale: 1, transformOrigin: "204px 581px" }, { scale: 1.06, transformOrigin: "204px 581px", duration: 1.2, ease: "power2.inOut" }, 2.6);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["02-routes-by-risk"] = tl;
+      })();
+    </script>
+  </div>
+</template>

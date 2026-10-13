@@ -1,0 +1,30 @@
+[a] OpenStreetMap
+[div] contributors
+[button] Demo data
+[span] Naari Kavach
+[span] नारी कवच
+[span] Routes
+[span] Help
+[span] Report
+[span] Trip
+[h2] Where to?
+[h3] How it works
+[strong] Hold SOS
+[span] 1.5 s to alert
+[strong] Safer route
+[span] Ranked by risk
+[strong] Report a spot
+[span] Stays anonymous
+[p] Location is off. Showing Thane. Turn on location for routes from where you are.
+[label] From
+[span] Walk
+[span] Ride
+[span] Risk for
+[span] Now
+[span] Day
+[span] Evening
+[span] Night
+[p] Choose where you are going. Safer routes show first.
+[p] Dark in 2 h 50 min. Sunset 06:18 pm.
+[span] SOS
+[span] Hold for SOS

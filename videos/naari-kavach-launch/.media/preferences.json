@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "youtube",
+      "confirmed_in": [
+        "naari-kavach-launch"
+      ],
+      "updated_at": "2026-10-13T09:57:55.025Z"
+    },
+    "aspect": {
+      "value": "1920x1080",
+      "confirmed_in": [
+        "naari-kavach-launch"
+      ],
+      "updated_at": "2026-10-13T09:57:55.592Z"
+    },
+    "language": {
+      "value": "en",
+      "confirmed_in": [
+        "naari-kavach-launch"
+      ],
+      "updated_at": "2026-10-13T09:57:56.095Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "naari-kavach-launch"
+      ],
+      "updated_at": "2026-10-13T09:57:56.366Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": [
+        "naari-kavach-launch"
+      ],
+      "updated_at": "2026-10-13T09:57:56.715Z"
+    },
+    "style_preset.product-launch-video": {
+      "value": "blue-professional",
+      "confirmed_in": [
+        "naari-kavach-launch"
+      ],
+      "updated_at": "2026-10-13T10:01:36.477Z"
+    }
+  },
+  "sightings": {}
+}

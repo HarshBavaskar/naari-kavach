@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #000;
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0E1330;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      /* Brand fonts for the helpline band, from local files. */
+      @font-face { font-family: "Anek Devanagari Variable"; src: url("assets/fonts/anek-devanagari-latin-wdth-normal.woff2") format("woff2"); font-weight: 100 800; font-stretch: 75% 125%; }
+      @font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-dz8m" id="root" data-composition-id="main" data-start="0" data-duration="46.1" data-width="1920" data-height="1080">
+      <div id="el-01-title" class="scene" data-composition-id="01-title" data-composition-src="compositions/frames/01-title.html" data-start="0" data-duration="3.5" data-track-index="0"></div>
+      <div id="el-02-routes-by-risk" class="scene" data-composition-id="02-routes-by-risk" data-composition-src="compositions/frames/02-routes-by-risk.html" data-start="3.1" data-duration="7.5" data-track-index="1"></div>
+      <div id="el-03-hardest-part" class="scene" data-composition-id="03-hardest-part" data-composition-src="compositions/frames/03-hardest-part.html" data-start="10.2" data-duration="7.5" data-track-index="0"></div>
+      <div id="el-04-trip-shield" class="scene" data-composition-id="04-trip-shield" data-composition-src="compositions/frames/04-trip-shield.html" data-start="17.3" data-duration="7.5" data-track-index="1"></div>
+      <div id="el-05-asks-once" class="scene" data-composition-id="05-asks-once" data-composition-src="compositions/frames/05-asks-once.html" data-start="24.4" data-duration="7.5" data-track-index="0"></div>
+      <div id="el-06-hold-for-sos" class="scene" data-composition-id="06-hold-for-sos" data-composition-src="compositions/frames/06-hold-for-sos.html" data-start="31.5" data-duration="7.5" data-track-index="1"></div>
+      <div id="el-07-know-your-rights" class="scene" data-composition-id="07-know-your-rights" data-composition-src="compositions/frames/07-know-your-rights.html" data-start="38.6" data-duration="7.5" data-track-index="0"></div>
+      <!-- Helpline band: one layer above every frame, so it never moves with a transition -->
+      <div data-hf-id="hf-f095" id="el-helpline-band" class="clip" data-start="0" data-duration="46.1" data-track-index="5" style="position: absolute; left: 0; top: 1016px; width: 1920px; height: 64px; z-index: 50; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; background: #0E1330; color: #EEF1FF; font-family: 'Mukta', 'Segoe UI', sans-serif; font-weight: 500; font-size: 26px;">
+        <span data-hf-id="hf-z20y" id="band-help">Emergency <b data-hf-id="hf-t4su" style="font-family: 'Anek Devanagari Variable', sans-serif; font-weight: 700; font-size: 32px; color: #FF9933; margin: 0 8px 0 6px;">112</b> · Women helpline <b data-hf-id="hf-hb7i" style="font-family: 'Anek Devanagari Variable', sans-serif; font-weight: 700; font-size: 32px; color: #FF9933; margin: 0 0 0 6px;">181</b></span>
+        <span data-hf-id="hf-ku64" id="band-brand" style="display: flex; align-items: center; gap: 12px; font-family: 'Anek Devanagari Variable', sans-serif; font-weight: 660; font-size: 26px;"><img data-hf-id="hf-qne5" src="assets/brand-mark-night.svg" alt="" style="width: 38px; height: 38px;">Naari Kavach</span>
+      </div>
+
+      <!-- BGM -->
+      <audio data-hf-id="hf-888c" id="el-bgm" src="assets/bgm/track.mp3" data-start="0" data-duration="46.1" data-track-index="11" data-volume="0.7"></audio>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // frame transitions
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-01-title", { opacity: 0, duration: 0.4, ease: "power2.inOut" }, 3.1);
+        tl.fromTo("#el-02-routes-by-risk", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 3.1);
+        tl.to("#el-02-routes-by-risk", { x: -1920, duration: 0.4, ease: "power3.inOut" }, 10.2);
+        tl.fromTo("#el-03-hardest-part", { x: 1920 }, { x: 0, duration: 0.4, ease: "power3.inOut" }, 10.2);
+        tl.to("#el-03-hardest-part", { x: -1920, duration: 0.4, ease: "power3.inOut" }, 17.3);
+        tl.fromTo("#el-04-trip-shield", { x: 1920 }, { x: 0, duration: 0.4, ease: "power3.inOut" }, 17.3);
+        tl.to("#el-04-trip-shield", { x: -1920, duration: 0.4, ease: "power3.inOut" }, 24.4);
+        tl.fromTo("#el-05-asks-once", { x: 1920 }, { x: 0, duration: 0.4, ease: "power3.inOut" }, 24.4);
+        tl.to("#el-05-asks-once", { x: -1920, duration: 0.4, ease: "power3.inOut" }, 31.5);
+        tl.fromTo("#el-06-hold-for-sos", { x: 1920 }, { x: 0, duration: 0.4, ease: "power3.inOut" }, 31.5);
+        tl.to("#el-06-hold-for-sos", { x: -1920, duration: 0.4, ease: "power3.inOut" }, 38.6);
+        tl.fromTo("#el-07-know-your-rights", { x: 1920 }, { x: 0, duration: 0.4, ease: "power3.inOut" }, 38.6);
+        tl.to({}, { duration: 46.1 }, 0); // full-span anchor
+      })();
+    </script>
+  </body>
+</html>

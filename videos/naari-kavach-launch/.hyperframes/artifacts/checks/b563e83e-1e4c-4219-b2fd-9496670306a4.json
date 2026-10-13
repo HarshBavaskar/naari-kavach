@@ -1,0 +1,457 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 10,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"el-helpline-band\"> is a timeline element that contains nested <img>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#el-helpline-band",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"el-helpline-band\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f1-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\01-the-message.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f2-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\02-why-they-worry.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"t03-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\03-tonight-meera.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f5-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\05-on-the-way.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f6-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\06-the-hardest-part.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f07-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\07-if-she-had-needed-help.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f07-labels\" data-start=\"0\" data-track-index=\"2\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\07-if-she-had-needed-help.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"f08-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\08-home.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      },
+      {
+        "code": "studio_missing_editable_id",
+        "severity": "warning",
+        "message": "<div class=\"t10-bg\" data-start=\"0\" data-track-index=\"0\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\compositions\\frames\\10-the-close.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+      }
+    ],
+    "filesScanned": 11
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 5,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 4.391,
+        "selector": "#f1-world",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -30.53,
+          "top": -79.08,
+          "right": 1950.53,
+          "bottom": 1159.08,
+          "width": 1981.06,
+          "height": 1238.16
+        },
+        "containerSelector": "#el-01-the-message > div:nth-of-type(1) > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 30.53,
+          "right": 30.53,
+          "top": 79.08,
+          "bottom": 79.08
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/01-the-message.html",
+        "bbox": {
+          "x": -30.53,
+          "y": -79.08,
+          "width": 1981.06,
+          "height": 1238.16
+        },
+        "firstSeen": 4.391,
+        "lastSeen": 4.391,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.391
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 13.174,
+        "selector": "#f2-world",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -81.31,
+          "top": -110.82,
+          "right": 2001.31,
+          "bottom": 1190.82,
+          "width": 2082.62,
+          "height": 1301.64
+        },
+        "containerSelector": "#el-02-why-they-worry > div:nth-of-type(1) > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 81.31,
+          "right": 81.31,
+          "top": 110.82,
+          "bottom": 110.82
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-why-they-worry.html",
+        "bbox": {
+          "x": -81.31,
+          "y": -110.82,
+          "width": 2082.62,
+          "height": 1301.64
+        },
+        "firstSeen": 13.174,
+        "lastSeen": 13.174,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13.174
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 48.306,
+        "selector": "#f07-cam",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 0,
+          "top": -60,
+          "right": 1920,
+          "bottom": 1140,
+          "width": 1920,
+          "height": 1200
+        },
+        "containerSelector": "#el-07-if-she-had-needed-help > div:nth-of-type(1) > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "top": 60,
+          "bottom": 60
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-if-she-had-needed-help.html",
+        "bbox": {
+          "x": 0,
+          "y": -60,
+          "width": 1920,
+          "height": 1200
+        },
+        "firstSeen": 48.306,
+        "lastSeen": 48.306,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          48.306
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 55.557,
+        "selector": "div.f07-hi",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 0,
+          "top": 1014.02,
+          "right": 249.64,
+          "bottom": 1069.5,
+          "width": 249.64,
+          "height": 55.48
+        },
+        "containerSelector": "#band-help",
+        "text": "ज़रूरत पड़े, तो मदद एक इशारे पर।",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-if-she-had-needed-help.html",
+        "bbox": {
+          "x": 0,
+          "y": 1014.02,
+          "width": 249.64,
+          "height": 55.48
+        },
+        "firstSeen": 55.557,
+        "lastSeen": 55.557,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          55.557
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 57.089,
+        "selector": "#f08-cam",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -177.98,
+          "top": -250.75,
+          "right": 2072.07,
+          "bottom": 1155.53,
+          "width": 2250.05,
+          "height": 1406.28
+        },
+        "containerSelector": "#el-08-home > div:nth-of-type(1) > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 177.98,
+          "right": 152.07,
+          "top": 250.75,
+          "bottom": 75.53
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/08-home.html",
+        "bbox": {
+          "x": -177.98,
+          "y": -250.75,
+          "width": 2250.05,
+          "height": 1406.28
+        },
+        "firstSeen": 57.089,
+        "lastSeen": 57.089,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          57.089
+        ]
+      }
+    ],
+    "duration": 79.046,
+    "samples": [
+      4.391,
+      13.174,
+      21.957,
+      30.74,
+      39.523,
+      48.306,
+      57.089,
+      65.872,
+      74.655
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 5,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      4.391,
+      21.957,
+      39.523,
+      57.089,
+      74.655
+    ],
+    "checked": 29,
+    "passed": 29
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"el-helpline-band\"> is a timeline element that contains nested <img>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#el-helpline-band",
+        "dataAttributes": {},
+        "sourceFile": "D:\\naari-kavach\\videos\\naari-kavach-launch\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"el-helpline-band\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 8
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 5,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 7.683,
+        "selector": "#f1-zoom",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 559.76,
+          "top": 65.14,
+          "right": 1937.76,
+          "bottom": 926.39,
+          "width": 1378,
+          "height": 861.25
+        },
+        "containerSelector": "#f1-shot",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 572,
+          "top": 100,
+          "right": 1872,
+          "bottom": 912.5,
+          "width": 1300,
+          "height": 812.5
+        },
+        "overflow": {
+          "left": 12.24,
+          "right": 65.76,
+          "top": 34.86,
+          "bottom": 13.89
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/02-routes-by-risk.html",
+        "bbox": {
+          "x": 559.76,
+          "y": 65.14,
+          "width": 1378,
+          "height": 861.25
+        },
+        "firstSeen": 7.683,
+        "lastSeen": 7.683,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          7.683
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 23.05,
+        "selector": "#f3-zoom",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 559.7,
+          "top": 83.2,
+          "right": 1937.7,
+          "bottom": 944.45,
+          "width": 1378,
+          "height": 861.25
+        },
+        "containerSelector": "#f3-shot",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 572,
+          "top": 100,
+          "right": 1872,
+          "bottom": 912.5,
+          "width": 1300,
+          "height": 812.5
+        },
+        "overflow": {
+          "left": 12.3,
+          "right": 65.7,
+          "top": 16.8,
+          "bottom": 31.95
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/04-trip-shield.html",
+        "bbox": {
+          "x": 559.7,
+          "y": 83.2,
+          "width": 1378,
+          "height": 861.25
+        },
+        "firstSeen": 23.05,
+        "lastSeen": 23.05,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          23.05
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 28.172,
+        "selector": "#f4-zoom",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 533,
+          "top": 78.46,
+          "right": 1911,
+          "bottom": 939.71,
+          "width": 1378,
+          "height": 861.25
+        },
+        "containerSelector": "#f4-shot",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 572,
+          "top": 100,
+          "right": 1872,
+          "bottom": 912.5,
+          "width": 1300,
+          "height": 812.5
+        },
+        "overflow": {
+          "left": 39,
+          "right": 39,
+          "top": 21.54,
+          "bottom": 27.21
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/05-asks-once.html",
+        "bbox": {
+          "x": 533,
+          "y": 78.46,
+          "width": 1378,
+          "height": 861.25
+        },
+        "firstSeen": 28.172,
+        "lastSeen": 28.172,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          28.172
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 38.417,
+        "selector": "#f5-zoom",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 533,
+          "top": 78.46,
+          "right": 1911,
+          "bottom": 939.71,
+          "width": 1378,
+          "height": 861.25
+        },
+        "containerSelector": "#f5-shot",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 572,
+          "top": 100,
+          "right": 1872,
+          "bottom": 912.5,
+          "width": 1300,
+          "height": 812.5
+        },
+        "overflow": {
+          "left": 39,
+          "right": 39,
+          "top": 21.54,
+          "bottom": 27.21
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/06-hold-for-sos.html",
+        "bbox": {
+          "x": 533,
+          "y": 78.46,
+          "width": 1378,
+          "height": 861.25
+        },
+        "firstSeen": 38.417,
+        "lastSeen": 38.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          38.417
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 43.539,
+        "selector": "#f6-zoom",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 559.76,
+          "top": 72.82,
+          "right": 1937.76,
+          "bottom": 934.07,
+          "width": 1378,
+          "height": 861.25
+        },
+        "containerSelector": "#f6-shot",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 572,
+          "top": 100,
+          "right": 1872,
+          "bottom": 912.5,
+          "width": 1300,
+          "height": 812.5
+        },
+        "overflow": {
+          "left": 12.24,
+          "right": 65.76,
+          "top": 27.18,
+          "bottom": 21.57
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/frames/07-know-your-rights.html",
+        "bbox": {
+          "x": 559.76,
+          "y": 72.82,
+          "width": 1378,
+          "height": 861.25
+        },
+        "firstSeen": 43.539,
+        "lastSeen": 43.539,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          43.539
+        ]
+      }
+    ],
+    "duration": 46.1,
+    "samples": [
+      2.561,
+      7.683,
+      12.806,
+      17.928,
+      23.05,
+      28.172,
+      33.294,
+      38.417,
+      43.539
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 5,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      2.561,
+      12.806,
+      23.05,
+      33.294,
+      43.539
+    ],
+    "checked": 34,
+    "passed": 34
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

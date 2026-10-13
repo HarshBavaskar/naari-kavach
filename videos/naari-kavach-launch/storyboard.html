@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naari Kavach launch video: storyboard v7</title>
+<style>
+/* Latin and Devanagari come from separate local files, picked by unicode-range. */
+@font-face { font-family: "Anek Devanagari Variable"; src: url("assets/fonts/anek-devanagari-latin-wdth-normal.woff2") format("woff2"); font-weight: 100 800; font-stretch: 75% 125%; }
+@font-face { font-family: "Anek Devanagari Variable"; src: url("assets/fonts/anek-devanagari-devanagari-wdth-normal.woff2") format("woff2"); font-weight: 100 800; font-stretch: 75% 125%; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-devanagari-500-normal.woff2") format("woff2"); font-weight: 400 500; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-devanagari-600-normal.woff2") format("woff2"); font-weight: 600; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+:root {
+  --paper: #FFFBF2; --ink: #0B1F4B; --muted: #4A5578; --light: #7A84A3;
+  --saffron: #E8791A; --saffron-flag: #FF9933; --green: #138808;
+  --card: rgba(11, 31, 75, 0.04); --line: rgba(11, 31, 75, 0.18); --page: #EFE9DA;
+  --display: "Anek Devanagari Variable", system-ui, sans-serif; --body: "Mukta", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; }
+body { background: var(--page); color: var(--ink); font-family: var(--body); padding: 40px 32px 80px; }
+header { max-width: 1500px; margin: 0 auto 28px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 20px; }
+header h1 { font-family: var(--display); font-weight: 700; font-size: 30px; }
+header h1 span { color: var(--saffron); font-weight: 600; font-size: 18px; margin-left: 8px; }
+header p { color: var(--muted); font-size: 16px; flex: 1 1 320px; }
+.tag { padding: 4px 14px; border-radius: 100px; background: var(--ink); color: #fff; font-size: 13px; font-weight: 500; }
+.grid { max-width: 1500px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 22px; }
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+.act { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 13px; font-weight: 600; margin-top: 6px; }
+.act::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.label { display: flex; justify-content: space-between; margin-top: 10px; font-size: 13px; font-weight: 600; }
+.label span:last-child { color: var(--light); font-weight: 500; font-variant-numeric: tabular-nums; }
+.note { margin-top: 4px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+.note b { color: var(--ink); font-weight: 600; }
+.chip { display: inline-block; margin-top: 8px; padding: 2px 12px; border-radius: 100px; background: #fff; outline: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.side { background: #fff; border-radius: 12px; padding: 22px; font-size: 14px; line-height: 1.6; color: var(--muted); min-height: 100%; }
+
+/* the frame: paper ground and a helpline band. Sizes in cqw so the sheet matches the build */
+.cell { aspect-ratio: 16 / 9; container-type: inline-size; position: relative; overflow: hidden; background: var(--paper); border-radius: 12px; }
+.band { position: absolute; left: 0; right: 0; bottom: 0; height: 6.4cqw; z-index: 3; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0 4cqw; font-size: 1.75cqw; font-weight: 500; }
+.band b { font-family: var(--display); font-weight: 700; font-size: 2.3cqw; color: var(--saffron-flag); margin: 0 0.6cqw 0 0.4cqw; }
+.band .brand { display: flex; align-items: center; gap: 1cqw; font-family: var(--display); font-weight: 660; font-size: 1.9cqw; }
+.band .brand img { width: 3.6cqw; height: 3.6cqw; background: #fff; border-radius: 50%; padding: 0.3cqw; }
+.stage { position: absolute; left: 0; right: 0; top: 0; bottom: 6.4cqw; }
+.hi { font-family: var(--display); font-weight: 700; line-height: 1.25; color: var(--ink); }
+.en { font-family: var(--body); color: var(--muted); line-height: 1.4; }
+.sub { font-family: var(--display); font-weight: 600; color: var(--muted); line-height: 1.3; }
+.num { font-family: var(--display); font-weight: 700; line-height: 0.95; color: var(--ink); }
+.time { position: absolute; left: 5cqw; top: 3.6cqw; display: inline-flex; align-items: baseline; gap: 0.8cqw; padding: 0 0 0.6cqw; border-bottom: 0.15cqw solid var(--ink); color: var(--muted); font-size: 1.5cqw; font-weight: 500; }
+.time b { font-family: var(--display); font-weight: 700; font-size: 2cqw; color: var(--ink); font-variant-numeric: tabular-nums; }
+.bubble { display: inline-block; max-width: 44cqw; padding: 1.1cqw 1.6cqw 1.3cqw; border-radius: 1.1cqw; font-family: var(--body); font-weight: 500; font-size: 2.6cqw; line-height: 1.35; color: #111B21; }
+.bubble.in { background: #fff; outline: 0.1cqw solid rgba(11, 31, 75, 0.12); border-top-left-radius: 0.2cqw; }
+.bubble.out { background: #D9FDD3; border-top-right-radius: 0.2cqw; }
+.who { font-size: 1.4cqw; font-weight: 600; color: var(--light); margin-bottom: 0.6cqw; }
+.src { position: absolute; left: 5cqw; bottom: 7.6cqw; font-size: 1.25cqw; color: var(--light); }
+.shot { position: absolute; border-radius: 0.8cqw; overflow: hidden; background: #F3F5FA; outline: 0.12cqw solid var(--line); }
+.shot img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pill { display: inline-block; padding: 0 0 0 1.4cqw; border-left: 0.4cqw solid var(--green); color: var(--green); font-size: 2cqw; font-weight: 600; }
+.card { background: #fff; outline: 0.12cqw solid var(--line); border-radius: 0.6cqw; padding: 1.4cqw 1.8cqw; }
+/* the evening as one line: 9:40 pm on the left, 10:20 pm on the right, the hard stretch marked in saffron */
+.track { position: absolute; left: 5cqw; right: 5cqw; bottom: 9.4cqw; height: 0.5cqw; border-radius: 1cqw; background: var(--line); }
+.track i { position: absolute; left: 62%; width: 22%; top: 0; bottom: 0; border-radius: 1cqw; background: var(--saffron); }
+.track u { position: absolute; top: 50%; width: 2cqw; height: 2cqw; margin: -1cqw 0 0 -1cqw; border-radius: 50%; background: var(--ink); outline: 0.4cqw solid var(--paper); }
+.track span { position: absolute; top: 1.2cqw; font-size: 1.2cqw; color: var(--light); font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Naari Kavach: Meera's evening <span>storyboard v7 · story-led, English first</span></h1>
+  <p>One dramatised evening in Mumbai, 9:40 to 10:20 pm. English headlines with a smaller Hindi line beneath. No tricolour strip. A film by Team ONYX: no government emblem, logo or name appears anywhere.</p>
+  <span class="tag">1920x1080 · about 90 s · 10 beats</span>
+</header>
+
+<div class="grid">
+  <div class="act">Home is waiting</div>
+
+  <div>
+    <div class="cell" id="frame-01">
+      <div class="stage">
+        <div class="time"><b>9:40</b> pm</div>
+        <div style="position:absolute;left:5cqw;top:13cqw">
+          <div class="who">Aai</div>
+          <div class="bubble in">Where are you? When will you be home?</div>
+        </div>
+        <div style="position:absolute;left:5cqw;right:5cqw;top:31cqw">
+          <div class="hi" style="font-size:4.2cqw">Every evening, from every home, the same question.</div>
+          <div class="sub" style="font-size:2.4cqw;margin-top:0.5cqw">हर शाम, हर घर से यही सवाल।</div>
+        </div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>01 · The message</span><span>hook · 0–8 s</span></div>
+    <p class="note"><b>The message from Aai types in first, alone.</b> The headline rises under it when the voice says "the same message".</p>
+    <span class="chip">in: cut</span>
+  </div>
+
+  <div>
+    <div class="cell" id="frame-02">
+      <div class="stage">
+        <div style="position:absolute;left:5cqw;top:3.4cqw"><div class="bubble in" style="font-size:1.7cqw;padding:0.8cqw 1.4cqw">Where are you? When will you be home?</div></div>
+        <div style="position:absolute;left:5cqw;right:5cqw;top:11cqw;display:grid;grid-template-columns:1.25fr 1fr;align-items:end;gap:3cqw">
+          <div>
+            <div class="hi" style="font-size:4.2cqw">The worry has a reason.</div>
+            
+            <div class="num" style="font-size:15cqw;margin-top:0.8cqw">26%</div>
+            <div class="en" style="font-size:1.9cqw;max-width:44cqw">of women in Maharashtra report physical or sexual violence</div>
+          </div>
+          <div>
+            <div class="num" style="font-size:9cqw;color:var(--ink)">2%</div>
+            <div class="en" style="font-size:1.9cqw;margin-top:1cqw">of them go to the police</div>
+          </div>
+        </div>
+      </div>
+      <div class="src">NFHS-5, women aged 18 to 49</div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>02 · Why they worry</span><span>awareness · 8–18 s</span></div>
+    <p class="note"><b>Aai's message shrinks into the corner and stays.</b> 26% counts up beneath the headline; the 2% arrives only when the voice reaches it.</p>
+    <span class="chip">in: crossfade</span>
+  </div>
+
+  <div>
+    <div class="cell" id="frame-03">
+      <div class="stage">
+        <div style="position:absolute;right:5cqw;top:5cqw;text-align:right">
+          <div class="who">Meera</div>
+          <div class="bubble out">Just leaving, Aai.</div>
+        </div>
+        <div style="position:absolute;left:5cqw;top:19cqw;right:5cqw;display:flex;align-items:center;gap:4cqw">
+          <img src="capture/assets/brand-mark.svg" alt="" style="width:15cqw;height:15cqw;flex:none">
+          <div>
+            <div class="hi" style="font-size:4.4cqw">Tonight, Meera does not walk alone.</div>
+            
+            <div class="en" style="font-size:2cqw;margin-top:1.2cqw">Naari Kavach will ask nothing of her.</div>
+          </div>
+        </div>
+        <div class="src" style="bottom:1.6cqw">A dramatised evening. The figures are real.</div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>03 · Tonight, Meera</span><span>intro · 18–24 s</span></div>
+    <p class="note"><b>Meera's reply pops in at the top right,</b> then the eight crescents of the mark arrive around the figure and the promise lands beside it.</p>
+    <span class="chip">in: zoom-through</span>
+  </div>
+
+  <div class="act">The walk, 9:42 to 10:20 pm</div>
+
+  <div>
+    <div class="cell" id="frame-04">
+      <div class="stage">
+        <div class="time"><b>9:42</b> pm · before she leaves</div>
+        <div style="position:absolute;left:5cqw;top:10cqw;width:31cqw">
+          <div class="hi" style="font-size:3.4cqw">Know the road before you leave.</div>
+          <div class="sub" style="font-size:1.9cqw;margin-top:0.5cqw">निकलने से पहले रास्ता जान लो।</div>
+          <div class="card" style="margin-top:1.6cqw">
+            <div class="en" style="font-size:1.4cqw">Hardest part</div>
+            <div class="num" style="font-size:3.8cqw;margin-top:0.3cqw">840 m</div>
+            <div class="en" style="font-size:1.5cqw">about 27 min in</div>
+          </div>
+          <div class="en" style="font-size:1.5cqw;margin-top:1.4cqw">Where the map is unsure, it fades and says so.</div>
+        </div>
+        <div class="shot" style="right:4cqw;top:4cqw;width:53cqw;height:33.1cqw"><img src="capture/assets/ui-route-night.png" alt=""></div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>04 · Before she leaves</span><span>feature · 24–37 s</span></div>
+    <p class="note"><b>The real Routes screen slides in from the right.</b> The "hardest part" card appears when the voice names it; the last line arrives as the camera nudges up to the fainter cells.</p>
+    <span class="chip">in: crossfade</span>
+  </div>
+
+  <div>
+    <div class="cell" id="frame-05">
+      <div class="stage">
+        <div class="time"><b>9:50</b> pm · on the way</div>
+        <div class="shot" style="left:5cqw;top:9.5cqw;width:22cqw;height:28cqw"><img src="capture/assets/ui-trip-shield.png" alt="" style="object-position:0 12%;width:330%;max-width:none"></div>
+        <div style="position:absolute;left:33cqw;top:11cqw;right:5cqw">
+          <div class="hi" style="font-size:4.4cqw">Phone in the bag. Eyes on the road.</div>
+          <div class="sub" style="font-size:2.4cqw;margin-top:0.5cqw">फ़ोन बैग में, ध्यान रास्ते पर।</div>
+          <div class="en" style="font-size:2.8cqw;font-weight:600;color:var(--ink);margin-top:1.4cqw;display:grid;gap:0.4cqw">
+            <span>No check-ins.</span><span>No timers.</span>
+          </div>
+        </div>
+        <div class="track"><i></i><u style="left:25%"></u><span style="left:0">9:40</span><span style="right:0">10:20</span></div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>05 · On the way</span><span>feature · 37–43 s</span></div>
+    <p class="note"><b>The evening line draws across the bottom and her dot starts moving.</b> The trip screen holds still on the left: "Watching quietly. Nothing to do."</p>
+    <span class="chip">in: push-slide left</span>
+  </div>
+
+  <div>
+    <div class="cell" id="frame-06">
+      <div class="stage">
+        <div class="time"><b>10:09</b> pm · the hardest part</div>
+        <div style="position:absolute;left:5cqw;right:5cqw;top:10cqw;display:grid;grid-template-columns:1.1fr 1fr;gap:3cqw;align-items:start">
+          <div>
+            <div class="hi" style="font-size:4.2cqw">She stopped. It asked, just once.</div>
+            
+            <div class="pill" style="margin-top:2.2cqw">She walks on. That is her answer.</div>
+          </div>
+          <div class="card" style="padding:2.2cqw 2.4cqw">
+            <div class="hi" style="font-size:3.6cqw">Are you okay?</div>
+            <div class="en" style="font-size:1.7cqw;margin-top:0.6cqw">You have stopped on a quiet stretch. Walk on, or tap.</div>
+          </div>
+        </div>
+        <div class="track"><i></i><u style="left:72%"></u><span style="left:0">9:40</span><span style="left:62%;color:var(--saffron);font-weight:600">840 m</span><span style="right:0">10:20</span></div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>06 · The hardest part</span><span>climax · 43–54 s</span></div>
+    <p class="note"><b>Her dot reaches the saffron stretch and stops; everything holds for a beat.</b> The question card appears, then the dot moves again and the card closes by itself as the green line lands.</p>
+    <span class="chip">in: push-slide left</span>
+  </div>
+
+  <div>
+    <div class="cell" id="frame-07">
+      <div class="stage">
+        <div style="position:absolute;left:5cqw;top:3.4cqw;width:38cqw;display:grid;gap:1.2cqw">
+          <div><div class="hi" style="font-size:3.2cqw">If she needs help, it is one gesture away.</div><div class="sub" style="font-size:1.9cqw;margin-top:0.5cqw">ज़रूरत पड़े, तो मदद एक इशारे पर।</div></div>
+          <div class="card"><div class="hi" style="font-size:2.5cqw">One tap</div><div class="en" style="font-size:1.5cqw">It watches closely, quietly</div></div>
+          <div class="card"><div class="hi" style="font-size:2.5cqw">Three presses</div><div class="en" style="font-size:1.5cqw">on the earphone button start SOS</div></div>
+          <div class="card" style="outline-color:var(--saffron)"><div class="hi" style="font-size:2.5cqw">One hold</div><div class="en" style="font-size:1.5cqw">and 112 is a tap away</div></div>
+        </div>
+        <div class="shot" style="right:4cqw;top:5cqw;width:46cqw;height:28.75cqw"><img src="capture/assets/ui-sos-active.png" alt=""></div>
+        <div class="en" style="position:absolute;right:4cqw;top:35cqw;font-size:1.4cqw">Had she needed help tonight</div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>07 · If she had needed help</span><span>feature · 54–65 s</span></div>
+    <p class="note"><b>The three cards stack in, one per sentence.</b> The real SOS screen fades up on the right with the third. The only red in the film is inside that screen.</p>
+    <span class="chip">in: crossfade</span>
+  </div>
+
+  <div>
+    <div class="cell" id="frame-08">
+      <div class="stage">
+        <div class="time"><b>10:20</b> pm · home</div>
+        <div style="position:absolute;left:5cqw;top:11cqw;width:40cqw">
+          <div class="who">Meera</div>
+          <div class="bubble out" style="font-size:4.4cqw;padding:1.6cqw 2.8cqw">Reached home.</div>
+          
+          <div class="en" style="font-size:2.2cqw;font-weight:600;color:var(--ink);margin-top:3cqw">Her route stayed locked on her own phone.</div>
+          <div class="pill" style="margin-top:1.4cqw">She arrived, so it is deleted.</div>
+        </div>
+        <div class="shot" style="right:4cqw;top:6cqw;width:40cqw;height:25cqw;opacity:0.55"><img src="capture/assets/ui-sealed-trail.png" alt=""></div>
+        <div class="en" style="position:absolute;right:4cqw;top:32.5cqw;width:40cqw;font-size:1.4cqw">What her family would have seen, only if she had not arrived</div>
+        <div class="track"><i></i><u style="left:100%"></u><span style="left:0">9:40</span><span style="right:0">10:20</span></div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>08 · Home</span><span>resolution · 65–75 s</span></div>
+    <p class="note"><b>Her dot reaches the end of the line and "Reached home." pops in large.</b> The contact's screen shows faintly on the right, then fades out as the green line says it is deleted.</p>
+    <span class="chip">in: zoom-through</span>
+  </div>
+
+  <div class="act">Tomorrow, and the close</div>
+
+  <div>
+    <div class="cell" id="frame-09">
+      <div class="stage">
+        <div style="position:absolute;left:5cqw;top:3cqw;right:5cqw;display:flex;align-items:baseline;gap:2cqw">
+          <div class="hi" style="font-size:3.8cqw">Know your rights.</div>
+          <div class="sub" style="font-size:2.2cqw">अपने अधिकार जानिए।</div>
+        </div>
+        <div class="shot" style="left:5cqw;top:10cqw;width:41cqw;height:35cqw"><img src="capture/assets/ui-help-guide.png" alt="" style="object-position:0 55%;width:330%;max-width:none"></div>
+        <div class="card" style="position:absolute;right:5cqw;top:10cqw;width:43cqw;height:35cqw;font-size:1.5cqw;line-height:1.5;color:var(--muted)">
+          <div class="hi" style="font-size:2.5cqw">Dark lane? The complaint is ready.</div>
+          <div class="sub" style="font-size:1.7cqw;margin-bottom:1cqw">गली अँधेरी है? शिकायत तैयार है।</div>
+          To the Assistant Commissioner,<br>[Ward office]<br><br>
+          Subject: Request to fix unsafe public spots in the ward<br><br>
+          1. Streetlights are missing or not working.<br>
+          2. The stretch is deserted and has no lighting.
+        </div>
+      </div>
+      <div class="band"><span>Emergency <b>112</b> · Women helpline <b>181</b></span><span class="brand"><img src="capture/assets/brand-mark.svg" alt="">Naari Kavach</span></div>
+    </div>
+    <div class="label"><span>09 · Tomorrow</span><span>awareness · 75–83 s</span></div>
+    <p class="note"><b>"Know your rights" lands first with the real guide on the left,</b> then the letter writes itself line by line on the right.</p>
+    <span class="chip">in: crossfade</span>
+  </div>
+
+  <div>
+    <div class="cell" id="frame-10">
+      <div class="stage" style="display:grid;grid-template-columns:1.25fr 1fr;align-items:center;gap:3cqw;padding:0 5cqw">
+        <div>
+          <div class="hi" style="font-size:4.6cqw">It watches the roads,<br>never the people.</div>
+          
+          <div style="display:flex;gap:4cqw;margin-top:2.2cqw">
+            <div><div class="num" style="font-size:7cqw;color:var(--ink)">1</div><div class="en" style="font-size:1.5cqw">question asked tonight</div></div>
+            <div><div class="num" style="font-size:7cqw;color:var(--green)">0</div><div class="en" style="font-size:1.5cqw">taps to answer it</div></div>
+          </div>
+        </div>
+        <div style="display:grid;justify-items:center;text-align:center;gap:1cqw">
+          <img src="capture/assets/brand-lockup.svg" alt="Naari Kavach" style="width:30cqw">
+          <div class="en" style="font-size:1.7cqw">Free, with no sign-up</div>
+          <div class="en" style="font-size:1.5cqw;margin-top:0.8cqw">In an emergency, dial</div>
+          <div class="num" style="font-size:9cqw">112</div>
+        </div>
+      </div>
+      <div class="band" style="justify-content:center;font-size:1.9cqw">Naari Kavach by ONYX</div>
+    </div>
+    <div class="label"><span>10 · The close</span><span>close · 83–92 s</span></div>
+    <p class="note"><b>The slogan lands first.</b> The two tallies tick to 1 and 0, the logo rises on the right, and 112 arrives last as the voice says it. The band changes to the credit: Naari Kavach by ONYX.</p>
+    <span class="chip">in: zoom-through</span>
+  </div>
+
+  <div>
+    <div class="side">
+      <div class="hi" style="font-size:18px;margin-bottom:10px">The story in one breath</div>
+      Aai asks where she is. The numbers say why Aai asks. Meera sets off with an app that asks her nothing, sees the hard part coming, puts the phone away, stops once in the dark stretch, is asked once, walks on, gets home, and tells Aai. Tomorrow the street itself can be fixed.
+    </div>
+    <div class="label"><span>Spine</span><span>whole film</span></div>
+  </div>
+
+  <div>
+    <div class="side">
+      <div class="hi" style="font-size:18px;margin-bottom:10px">Look and seams</div>
+      <div style="display:flex;gap:8px;margin-bottom:12px">
+        <span style="width:34px;height:34px;border-radius:8px;background:#FFFBF2;outline:1px solid var(--line)"></span>
+        <span style="width:34px;height:34px;border-radius:8px;background:#0B1F4B"></span>
+        <span style="width:34px;height:34px;border-radius:8px;background:#E8791A"></span>
+        <span style="width:34px;height:34px;border-radius:8px;background:#138808"></span>
+        <span style="width:34px;height:34px;border-radius:8px;background:#4A5578"></span>
+      </div>
+      Paper ground, navy ink, saffron for numbers and the hard stretch, green for the answer. No tricolour strip. The helpline band and the evening line sit above every seam.<br><br>
+      01 cut → 02 crossfade → 03 zoom-through → 04 crossfade → 05 push-slide → 06 push-slide → 07 crossfade → 08 zoom-through → 09 crossfade → 10 zoom-through
+    </div>
+    <div class="label"><span>Tokens</span><span>whole film</span></div>
+  </div>
+</div>
+</body>
+</html>

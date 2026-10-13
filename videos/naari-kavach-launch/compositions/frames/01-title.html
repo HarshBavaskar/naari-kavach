@@ -1,0 +1,30 @@
+<template>
+  <div id="root" data-composition-id="01-title" data-start="0" data-duration="3.5" data-width="1920" data-height="1080">
+    <style>
+      @font-face { font-family: "Anek Devanagari Variable"; src: url("assets/fonts/anek-devanagari-latin-wdth-normal.woff2") format("woff2"); font-weight: 100 800; font-stretch: 75% 125%; }
+      @font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Mukta"; src: url("assets/fonts/mukta-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      #t1-bg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: #FFFBF2; }
+      #t1-logo { position: absolute; left: 560px; top: 170px; width: 800px; height: 240px; }
+      #t1-hi { position: absolute; left: 160px; top: 470px; width: 1600px; text-align: center; font-family: "Anek Devanagari Variable", sans-serif; font-weight: 700; font-size: 96px; line-height: 1.15; color: #0B1F4B; }
+      #t1-by { position: absolute; left: 160px; top: 700px; width: 1600px; text-align: center; font-family: "Mukta", sans-serif; font-weight: 500; font-size: 34px; color: #4A5578; }
+    </style>
+    <div id="t1-bg" class="clip" data-start="0" data-duration="3.5" data-track-index="0"></div>
+    <img id="t1-logo" src="assets/brand-lockup.svg" alt="">
+    <div id="t1-hi">What Naari Kavach can do</div>
+    <div id="t1-by">Naari Kavach by ONYX</div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        var tl = gsap.timeline({ paused: true });
+        tl.fromTo("#t1-logo", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.1);
+        tl.fromTo("#t1-hi", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.6);
+        tl.fromTo("#t1-by", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 1.4);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["01-title"] = tl;
+      })();
+    </script>
+  </div>
+</template>

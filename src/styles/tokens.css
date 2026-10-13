@@ -1,0 +1,150 @@
+/*
+  Naari Kavach design tokens.
+  Flat surfaces, no gradients, no shadows, no glows. Separation comes from
+  surface colour steps, never from hard borders. Radius scales with hierarchy.
+*/
+
+:root {
+  color-scheme: light dark;
+
+  /* Surfaces: cool mist base, stepped indigo-tinted greys */
+  --bg: #f3f5fa;
+  --surface: #ffffff;
+  --surface-2: #e9edf7;
+  --surface-3: #dde3f2;
+
+  /* Ink */
+  --ink: #18213f;
+  --ink-2: #4e5778;
+  --ink-3: #8790ae;
+
+  /* Brand + semantic */
+  --primary: #4152d9;
+  --primary-ink: #ffffff;
+  --primary-soft: #e3e7ff;
+  --primary-strong: #2f3dba;
+  --logo-deep: #2b3699;
+  --logo-soft: #c3caff;
+
+  --sos: #e5364f;
+  --sos-ink: #9e1730;
+  --sos-soft: #fde4e8;
+  --sos-on: #ffffff;
+
+  --safe: #12a27a;
+  --safe-ink: #0b6b50;
+  --safe-soft: #ddf4ec;
+  --safe-on: #ffffff;
+
+  --caution: #f0a020;
+  --caution-ink: #8a5a00;
+  --caution-soft: #fdf0d6;
+
+  /* Map risk ramp (fill colours for hexes) */
+  /* Muted, calming ramp: sage, sand, clay, rose. Informs without alarming. */
+  --risk-0: #6fb79a;
+  --risk-1: #9cc3a4;
+  --risk-2: #e2b869;
+  --risk-3: #dc8a6c;
+  --risk-4: #d65a6e;
+
+  /* Radius by hierarchy */
+  --r-sheet: 28px;
+  --r-card: 18px;
+  --r-btn: 14px;
+  --r-input: 14px;
+  --r-pill: 999px;
+
+  /* Spacing (4px base) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+
+  /* Type */
+  --font-display: 'Anek Devanagari Variable', 'Mukta', system-ui, sans-serif;
+  --font-body: 'Mukta', 'Anek Devanagari Variable', system-ui, sans-serif;
+
+  /* Modular scale, ratio ~1.2 from 16px (Bringhurst-style classic steps) */
+  --t-12: 0.75rem;
+  --t-14: 0.875rem;
+  --t-16: 1rem;
+  --t-18: 1.125rem;
+  --t-21: 1.3125rem;
+  --t-24: 1.5rem;
+  --t-30: 1.875rem;
+  --t-36: 2.25rem;
+  --t-48: 3rem;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --d-fast: 140ms;
+  --d-base: 220ms;
+  --d-slow: 420ms;
+
+  /* Layout */
+  --panel-w: 420px;
+  --nav-h: 76px;
+  --focus: 0 0 0 3px var(--bg), 0 0 0 5px var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0e1330;
+    --surface: #161d44;
+    --surface-2: #1f2856;
+    --surface-3: #2a3468;
+    --ink: #eef1ff;
+    --ink-2: #aeb6da;
+    --ink-3: #7881aa;
+    --primary: #7d8bff;
+    --primary-ink: #0e1330;
+    --primary-soft: #262f66;
+    --primary-strong: #9aa5ff;
+    --logo-deep: #9aa4d8;
+    --logo-soft: #c3caff;
+    --sos: #ec4058;
+    --sos-ink: #ffc2cc;
+    --sos-soft: #3a1830;
+    --sos-on: #ffffff;
+    --safe: #3ccb9f;
+    --safe-ink: #a6f0d6;
+    --safe-soft: #12352f;
+    --safe-on: #0e1330;
+    --caution: #ffb648;
+    --caution-ink: #ffdda0;
+    --caution-soft: #3a2e14;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0e1330;
+  --surface: #161d44;
+  --surface-2: #1f2856;
+  --surface-3: #2a3468;
+  --ink: #eef1ff;
+  --ink-2: #aeb6da;
+  --ink-3: #7881aa;
+  --primary: #7d8bff;
+  --primary-ink: #0e1330;
+  --primary-soft: #262f66;
+  --primary-strong: #9aa5ff;
+  --logo-deep: #9aa4d8;
+  --logo-soft: #c3caff;
+  --sos: #ec4058;
+  --sos-ink: #ffc2cc;
+  --sos-soft: #3a1830;
+  --sos-on: #ffffff;
+  --safe: #3ccb9f;
+  --safe-ink: #a6f0d6;
+  --safe-soft: #12352f;
+  --safe-on: #0e1330;
+  --caution: #ffb648;
+  --caution-ink: #ffdda0;
+  --caution-soft: #3a2e14;
+}

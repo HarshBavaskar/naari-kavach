@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Naari Kavach brand</title>
+<style>
+  @font-face { font-family: 'Anek'; src: url('fonts/anek-devanagari-latin-wdth-normal.woff2') format('woff2-variations'); font-weight: 100 800; font-stretch: 75% 125%; }
+  @font-face { font-family: 'Anek'; src: url('fonts/anek-devanagari-devanagari-wdth-normal.woff2') format('woff2-variations'); font-weight: 100 800; font-stretch: 75% 125%; unicode-range: U+0900-097F; }
+  @font-face { font-family: 'Mukta'; src: url('fonts/mukta-latin-400-normal.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'Mukta'; src: url('fonts/mukta-latin-600-normal.woff2') format('woff2'); font-weight: 600; }
+  :root { --ink:#18213F; --ink2:#4E5778; --ink3:#8790AE; --bg:#F3F5FA; --s2:#E9EDF7; --indigo:#4152D9; --deep:#2B3699; --red:#E5364F; --night:#0E1330; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 Mukta, system-ui, sans-serif; }
+  .page { max-width: 1280px; margin: 0 auto; padding: 56px 48px 72px; display: grid; gap: 20px; }
+  h1, h2 { font-family: Anek, sans-serif; margin: 0; font-weight: 640; letter-spacing: -0.015em; }
+  h1 { font-size: 44px; line-height: 1.05; }
+  h2 { font-size: 20px; margin-bottom: 14px; }
+  p { margin: 0; color: var(--ink2); max-width: 62ch; }
+  .grid { display: grid; gap: 20px; width: 100%; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .card { background: #fff; border-radius: 24px; padding: 28px; }
+  .c4 { grid-column: span 4; } .c5 { grid-column: span 5; } .c6 { grid-column: span 6; } .c7 { grid-column: span 7; } .c8 { grid-column: span 8; } .c12 { grid-column: span 12; }
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; }
+  .hero img { width: 100%; max-width: 520px; }
+  .meaning { display: grid; gap: 12px; margin-top: 22px; }
+  .meaning div { display: grid; grid-template-columns: 14px 1fr; gap: 12px; align-items: start; }
+  .meaning i { width: 14px; height: 14px; border-radius: 50%; margin-top: 5px; }
+  .meaning b { font-weight: 600; color: var(--ink); }
+  .row { display: flex; gap: 16px; align-items: end; flex-wrap: wrap; min-width: 0; }
+  .card img { max-width: 100%; }
+  .chip { display: grid; justify-items: center; gap: 6px; font-size: 13px; color: var(--ink3); }
+  .tile { border-radius: 18px; display: grid; place-items: center; }
+  .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  .sw { border-radius: 16px; height: 108px; padding: 12px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 13px; }
+  .sw b { font-weight: 600; font-size: 14px; }
+  .type-big { font-family: Anek; font-size: 56px; font-weight: 660; font-stretch: 104%; letter-spacing: -0.02em; line-height: 1; }
+  .type-deva { font-family: Anek; font-size: 40px; font-weight: 560; color: var(--ink2); margin-top: 6px; }
+  .dont { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .dont div { background: var(--s2); border-radius: 16px; padding: 14px; display: grid; justify-items: center; gap: 8px; font-size: 13px; color: var(--ink2); text-align: center; }
+  .x { color: var(--red); font-weight: 600; }
+  .clear { position: relative; width: 240px; height: 240px; background: #FDE4E8; border-radius: 12px; display: grid; place-items: center; }
+  .clear img { width: 150px; background: #fff; }
+  .clear span { position: absolute; font-size: 12px; color: var(--red); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="card c12 hero">
+    <div>
+      <h1>Naari Kavach<br /><span style="color:var(--ink2);font-weight:560">नारी कवच</span></h1>
+      <p style="margin-top:14px">The Kavach Mandala. A woman at the centre, held inside a ring of eight interlocking crescents that turn toward her like cupped hands. Protection on every side, drawn with compass geometry, never with a cage.</p>
+      <div class="meaning">
+        <div><i style="background:var(--red)"></i><p><b>Bindi.</b> Her head is the red dot, the only warm colour in the identity and the same red as SOS.</p></div>
+        <div><i style="background:var(--indigo)"></i><p><b>Sari and pallu.</b> A flared silhouette with the pallu drawn as two border lines, as on a woven sari edge.</p></div>
+        <div><i style="background:var(--deep)"></i><p><b>Eight crescents.</b> The ashta (eight) directions of a rangoli. Each crescent passes under the next, so the ring reads as one continuous weave.</p></div>
+      </div>
+    </div>
+    <img src="mark.svg" alt="Naari Kavach mark" />
+  </div>
+
+  <div class="grid">
+    <div class="card c5">
+      <h2>Construction</h2>
+      <img src="construction.svg" alt="Construction geometry" style="width:100%" />
+      <p style="font-size:14px;margin-top:10px">8 circles r = 16.5 on an orbit of 29.5, each minus a twin shifted 6.2 toward the centre. Every crescent is masked by the disc of its clockwise neighbour plus a 1.6 gap.</p>
+    </div>
+    <div class="card c7">
+      <h2>Lockups</h2>
+      <div style="display:grid;gap:18px">
+        <img src="lockup-horizontal.svg" alt="" style="height:96px" />
+        <div class="row">
+          <img src="lockup-stacked.svg" alt="" style="height:170px" />
+          <img src="lockup-horizontal-night.svg" alt="" style="height:96px;border-radius:14px" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card c7">
+      <h2>Sizes</h2>
+      <div class="row">
+        <div class="chip"><div class="tile" style="width:220px;height:220px;background:var(--bg)"><img src="mark.svg" width="190" alt="" /></div>Full mark, 64 px and up</div>
+        <div class="chip"><div class="tile" style="width:96px;height:96px;background:var(--bg)"><img src="mark-simple.svg" width="80" alt="" /></div>Simple, 24 to 63 px</div>
+        <div class="chip"><img src="app-icon.svg" width="120" alt="" />App icon</div>
+        <div class="chip"><img src="favicon.svg" width="32" alt="" /><img src="favicon.svg" width="16" alt="" />Favicon</div>
+      </div>
+    </div>
+    <div class="card c5">
+      <h2>Clear space</h2>
+      <div class="row">
+        <div class="clear"><img src="mark.svg" alt="" /><span style="top:6px">¼ mark</span></div>
+        <p style="font-size:14px;max-width:24ch">Keep a quarter of the mark's width clear on all sides. Minimum size 16 px (favicon art below 24 px).</p>
+      </div>
+    </div>
+
+    <div class="card c8">
+      <h2>Colour</h2>
+      <div class="swatches">
+        <div class="sw" style="background:var(--indigo);color:#fff"><b>Indigo</b>#4152D9</div>
+        <div class="sw" style="background:var(--deep);color:#fff"><b>Deep indigo</b>#2B3699</div>
+        <div class="sw" style="background:var(--red);color:#fff"><b>Bindi red</b>#E5364F</div>
+        <div class="sw" style="background:var(--ink);color:#fff"><b>Ink</b>#18213F</div>
+        <div class="sw" style="background:var(--night);color:#fff"><b>Night</b>#0E1330</div>
+        <div class="sw" style="background:var(--bg);color:var(--ink)"><b>Mist</b>#F3F5FA</div>
+      </div>
+    </div>
+    <div class="card c4">
+      <h2>Type</h2>
+      <div class="type-big">Naari Kavach</div>
+      <div class="type-deva">नारी कवच</div>
+      <p style="font-size:14px;margin-top:10px">Anek Devanagari 660 at 104% width for the wordmark. Mukta for text. Both by Ek Type, Mumbai.</p>
+    </div>
+
+    <div class="card c12">
+      <h2>Variants and misuse</h2>
+      <div class="row" style="margin-bottom:18px">
+        <div class="tile" style="width:120px;height:120px;background:#fff"><img src="mark-mono.svg" width="96" alt="" /></div>
+        <div class="tile" style="width:120px;height:120px;background:#fff"><img src="mark-black.svg" width="96" alt="" /></div>
+        <img src="mark-reverse.svg" width="120" alt="" style="border-radius:18px" />
+        <img src="mark-night.svg" width="120" alt="" style="border-radius:18px" />
+      </div>
+      <div class="dont">
+        <div><img src="mark.svg" width="80" style="transform:scaleX(1.35)" alt="" /><span class="x">Don't stretch</span></div>
+        <div><img src="mark.svg" width="80" style="transform:rotate(22deg)" alt="" /><span class="x">Don't rotate</span></div>
+        <div><img src="mark.svg" width="80" style="filter:hue-rotate(140deg)" alt="" /><span class="x">Don't recolour</span></div>
+        <div><img src="mark.svg" width="80" style="filter:drop-shadow(0 6px 10px rgba(0,0,0,.4))" alt="" /><span class="x">No shadows or glows</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
