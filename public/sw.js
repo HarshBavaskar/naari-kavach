@@ -1,7 +1,16 @@
 // Naari Kavach service worker: keeps the app shell and helplines available offline.
 // Network-first for API calls, cache-first for the built shell.
 const SHELL = 'kavach-shell-v2';
-const SHELL_URLS = ['./', './index.html', './icon.svg', './favicon.svg', './manifest.webmanifest'];
+const SHELL_URLS = [
+  './',
+  './index.html',
+  './icon.svg',
+  './favicon.svg',
+  './app-icon-180.png',
+  './app-icon-192.png',
+  './app-icon-512.png',
+  './manifest.webmanifest',
+];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => c.addAll(SHELL_URLS)).then(() => self.skipWaiting()));
